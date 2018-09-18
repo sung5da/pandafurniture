@@ -148,11 +148,7 @@ public class IndexActivity extends AppCompatActivity {
                 }
             }
 
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                MyLog.d(TAG,"no internet connectivity");
 
-            }
         });
     }
 }
