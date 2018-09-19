@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
 
         headerLayout = navigationView.getHeaderView(0);
 
-        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
+        //GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
     }
 
     @Override
@@ -102,11 +102,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if(id == R.id.nav_list){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
+            //GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
         }else if (id == R.id.nav_map){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
+            //GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
         }else if (id == R.id.nav_keep){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
+            //GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
         }else if (id == R.id.nav_register){
             GoLib.getInstance().goBestFoodRegisterActivity(this);
         }else if (id == R.id.nav_profile){
