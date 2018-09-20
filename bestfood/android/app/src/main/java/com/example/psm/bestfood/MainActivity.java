@@ -57,8 +57,11 @@ public class MainActivity extends AppCompatActivity
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
 =======
+=======
+>>>>>>> parent of c0b2b35... Revert "GoLib 문제"
 =======
 >>>>>>> parent of c0b2b35... Revert "GoLib 문제"
 =======
