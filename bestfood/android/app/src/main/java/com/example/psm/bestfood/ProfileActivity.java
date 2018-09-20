@@ -171,25 +171,25 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         },year, month, day).show();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu){
-//        getMenuInflater().inflate(R.menu.menu_submit,menu);
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item){
-//        switch (item.getItemId()){
-//            case android.R.id.home:
-//                close();
-//                break;
-//
-//            case R.id.action_submit:
-//                save();
-//                break;
-//        }
-//
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_submit,menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case android.R.id.home:
+                close();
+                break;
+
+            case R.id.action_submit:
+                save();
+                break;
+        }
+
+        return true;
+    }
 
     private MemberInfoItem getMemberInfoItem(){
         MemberInfoItem item = new MemberInfoItem();
@@ -241,7 +241,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    private void save(){
+    private void save({
         final MemberInfoItem newItem = getMemberInfoItem();
 
         if(!isChanged(newItem)){
