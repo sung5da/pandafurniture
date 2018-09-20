@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
 =======
 =======
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity
 =======
 //        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
 >>>>>>> parent of c0b2b35... Revert "GoLib 문제"
+=======
+        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
+>>>>>>> parent of cefa20a... GoLib 문제
 
 
 >>>>>>> parent of c0b2b35... Revert "GoLib 문제"
@@ -124,17 +128,17 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
 
-//        if(id == R.id.nav_list){
-//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
-//        }else if (id == R.id.nav_map){
-//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
-//        }else if (id == R.id.nav_keep){
-//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
-//        }else if (id == R.id.nav_register){
-//            GoLib.getInstance().goBestFoodRegisterActivity(this);
-//        }else if (id == R.id.nav_profile){
-//            GoLib.getInstance().goProfileActivity(this);
-//        }
+        if(id == R.id.nav_list){
+            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
+        }else if (id == R.id.nav_map){
+            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
+        }else if (id == R.id.nav_keep){
+            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
+        }else if (id == R.id.nav_register){
+            GoLib.getInstance().goBestFoodRegisterActivity(this);
+        }else if (id == R.id.nav_profile){
+            GoLib.getInstance().goProfileActivity(this);
+        }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
