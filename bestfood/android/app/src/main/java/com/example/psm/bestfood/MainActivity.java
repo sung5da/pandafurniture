@@ -55,8 +55,11 @@ public class MainActivity extends AppCompatActivity
         headerLayout = navigationView.getHeaderView(0);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
 =======
+=======
+>>>>>>> parent of c0b2b35... Revert "GoLib 문제"
 //        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
 
 
