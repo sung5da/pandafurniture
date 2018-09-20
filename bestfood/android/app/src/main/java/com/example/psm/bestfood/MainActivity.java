@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.psm.bestfood.item.MemberInfoItem;
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         memberInfoItem = ((MyApp)getApplication()).getMemberInfoItem();
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity
 
         headerLayout = navigationView.getHeaderView(0);
 
-        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
+//        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
+
+
     }
 
     @Override
@@ -101,19 +103,21 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
 
-        if(id == R.id.nav_list){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
-        }else if (id == R.id.nav_map){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
-        }else if (id == R.id.nav_keep){
-            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
-        }else if (id == R.id.nav_register){
-            GoLib.getInstance().goBestFoodRegisterActivity(this);
-        }else if (id == R.id.nav_profile){
-            GoLib.getInstance().goProfileActivity(this);
-        }
+//        if(id == R.id.nav_list){
+//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main, BestFoodListFragment.newInstance());
+//        }else if (id == R.id.nav_map){
+//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodMapFragment.newInstance());
+//        }else if (id == R.id.nav_keep){
+//            GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodKeepFragment.newInstance());
+//        }else if (id == R.id.nav_register){
+//            GoLib.getInstance().goBestFoodRegisterActivity(this);
+//        }else if (id == R.id.nav_profile){
+//            GoLib.getInstance().goProfileActivity(this);
+//        }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

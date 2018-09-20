@@ -68,6 +68,7 @@ public class IndexActivity extends AppCompatActivity {
                 finish();
             }
         });
+        closeButton.setVisibility(View.VISIBLE);
     }
 
     public void startTask(){
@@ -119,11 +120,11 @@ public class IndexActivity extends AppCompatActivity {
             insertMemberPhone();
         }
 
-        Intent intent = new Intent(IndexActivity.this,MainActivity.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
 
-        //Intent intent2 = new Intent((IndexActivity.this.ProfileActivity.class);
-        //startActivity(intent2);
+        Intent intent2 = new Intent(this, ProfileActivity.class);
+        startActivity(intent2);
 
         finish();
     }
