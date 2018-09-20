@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.psm.bestfood.item.MemberInfoItem;
@@ -39,6 +38,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         memberInfoItem = ((MyApp)getApplication()).getMemberInfoItem();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity
         headerLayout = navigationView.getHeaderView(0);
 
         GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
-
-
     }
 
     @Override
@@ -118,6 +116,4 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
