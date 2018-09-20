@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         
 //        GoLib.getInstance().goFragment(getSupportFragmentManager(),R.id.content_main,BestFoodListFragment.newInstance());
+
     }
 
     @Override

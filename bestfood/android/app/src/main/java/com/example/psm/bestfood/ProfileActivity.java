@@ -1,11 +1,19 @@
 package com.example.psm.bestfood;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -110,8 +118,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         phoneEdit.setText(currentItem.phone);
 
         TextView phoneStateEdit = (TextView)findViewById(R.id.phone_state);
-<<<<<<< HEAD
-=======
+
         if(phoneNumber.startsWith("0")){
             phoneStateEdit.setText("("+getResources().getString(R.string.device_number)+")");
         }else {
@@ -202,15 +209,48 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             return true;
         }
     }
->>>>>>> parent of c0b2b35... Revert "GoLib 문제"
 
 
-
+    private boolean isNoName(MemberInfoItem newItem) {
+        if (StringLib.getInstance().isBlank(newItem.name)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-<<<<<<< HEAD
-=======
 
-    private void save({
+    private void close() {
+        MemberInfoItem newItem = getMemberInfoItem();
+
+        if (!isChanged(newItem) && !isNoName(newItem)) {
+            finish();
+        } else if (isNoName(newItem)) {
+            MyToast.s(context, R.string.name_need);
+            finish();
+        } else {
+            new AlertDialog.Builder(this).setTitle(R.string.change_save)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            save();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .show();
+        }
+    }
+
+
+
+
+
+
+    private void save(){
         final MemberInfoItem newItem = getMemberInfoItem();
 
         if(!isChanged(newItem)){
@@ -270,5 +310,4 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
->>>>>>> parent of c0b2b35... Revert "GoLib 문제"
 }
