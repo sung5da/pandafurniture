@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 
 //import com.example.psm.bestfood.BestFoodInfoActivity;
 //import com.example.psm.bestfood.BestFoodRegisterActivity;
-//import com.example.psm.bestfood.ProfileActivity;
+import com.example.psm.bestfood.ProfileActivity;
 
 /**
  * 액티비티나 프래그먼트 실행 라이브러리
@@ -73,25 +73,25 @@ public class GoLib {
         context.startActivity(intent);
     }
 
-    /**
-     * 맛집 정보 등록 액티비티를 실행한다.
-     * @param context 컨텍스트
-     */
-    public void goBestFoodRegisterActivity(Context context) {
-        Intent intent = new Intent(context, BestFoodRegisterActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-
-    /**
-     * 맛집 정보 액티비티를 실행한다.
-     * @param context 컨텍스트
-     * @param infoSeq 맛집 정보 일련번호
-     */
-    public void goBestFoodInfoActivity(Context context, int infoSeq) {
-        Intent intent = new Intent(context, BestFoodInfoActivity.class);
-        intent.putExtra(BestFoodInfoActivity.INFO_SEQ, infoSeq);
-        context.startActivity(intent);
-    }
+//    /**
+//     * 맛집 정보 등록 액티비티를 실행한다.
+//     * @param context 컨텍스트
+//     */
+//    public void goBestFoodRegisterActivity(Context context) {
+//        Intent intent = new Intent(context, BestFoodRegisterActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.startActivity(intent);
+//    }
+//
+//
+//    /**
+//     * 맛집 정보 액티비티를 실행한다.
+//     * @param context 컨텍스트
+//     * @param infoSeq 맛집 정보 일련번호
+//     */
+//    public void goBestFoodInfoActivity(Context context, int infoSeq) {
+//        Intent intent = new Intent(context, BestFoodInfoActivity.class);
+//        intent.putExtra(BestFoodInfoActivity.INFO_SEQ, infoSeq);
+//        context.startActivity(intent);
+//    }
 }
